@@ -6,15 +6,15 @@ export default function App({ posts }) {
       <h1 className="text-4xl font-bold text-gray-800 text-center">
         Dev Blog App
       </h1>
-      <div class=" container mt-16 max-w-4xl mx-auto">
+      <div className="container mt-16 sm:max-w-4xl mx-auto">
         {posts.map((post, index) => (
-          <div key={index} className="rounded-4 flex my-8">
+          <div key={index} className="rounded-4 sm:flex my-8 px-8">
             <img
               className="h-40 w-80 rounded-2xl"
               src={post.postIMG}
               alt={post.author}
             />
-            <div className="ml-8">
+            <div className="sm:ml-8">
               <h1 className="text-xl font-bold text-gray-600">{post.title}</h1>
               <p className="mt-2">{post.description.join().slice(0, 120)}...</p>
               <Link href={`/post?id=${post._id}`}>
